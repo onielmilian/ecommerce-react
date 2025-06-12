@@ -1,0 +1,148 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "strapi-import-export": {
+      "idField": "name"
+    }
+  },
+  "attributes": {
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "products"
+    },
+    "name": {
+      "type": "string",
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "text"
+    },
+    "model": {
+      "type": "string",
+      "unique": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "stock": {
+      "type": "integer",
+      "min": 0
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0.1
+    },
+    "discount_price": {
+      "type": "decimal",
+      "min": 0.1
+    },
+    "discount_start_date": {
+      "type": "date"
+    },
+    "discount_end_date": {
+      "type": "date"
+    },
+    "operating_system": {
+      "type": "enumeration",
+      "enum": [
+        "Android",
+        "iOS",
+        "HarmonyOS"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Blanco",
+        "Negro",
+        "Gris"
+      ]
+    },
+    "microprocessor": {
+      "type": "string"
+    },
+    "ram": {
+      "type": "integer",
+      "min": 4
+    },
+    "storage_capacity": {
+      "type": "integer",
+      "min": 32
+    },
+    "battery_capacity": {
+      "type": "integer",
+      "min": 2000
+    },
+    "screen_size": {
+      "type": "decimal",
+      "min": 4
+    },
+    "front_camera": {
+      "type": "integer"
+    },
+    "back_camera": {
+      "type": "integer"
+    },
+    "product_status": {
+      "type": "enumeration",
+      "enum": [
+        "Nuevo",
+        "Reacondicionado"
+      ]
+    },
+    "warranty": {
+      "type": "text"
+    },
+    "published": {
+      "type": "boolean",
+      "default": true
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "bestseller": {
+      "type": "boolean",
+      "default": false
+    },
+    "currency": {
+      "type": "enumeration",
+      "default": "USD",
+      "enum": [
+        "USD",
+        "EURO"
+      ]
+    }
+  }
+}
