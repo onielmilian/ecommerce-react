@@ -1,8 +1,8 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
-import { useGetBrandProducts } from "../../../../api/useGetBrandProducts";
-import { ResponseType } from "../../../../types/response";
-import { useGetBrand } from "../../../../api/useGetBrand";
+import { useGetBrandProducts } from "../../../../../api/useGetBrandProducts";
+import { ResponseType } from "../../../../../types/response";
+import { useGetBrand } from "../../../../../api/useGetBrand";
 import BrandProductList from "@/src/components/brand-product-list";
 import BrandHeader from "./components/brand-header";
 

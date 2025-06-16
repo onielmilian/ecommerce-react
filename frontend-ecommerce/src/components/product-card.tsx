@@ -1,3 +1,4 @@
+"use client";
 import { Expand, ShoppingCart } from "lucide-react";
 import IconButton from "./icon-button";
 import { Card, CardContent } from "./ui/card";
@@ -23,22 +24,24 @@ const ProductCard = ({ product }: ProductCardProps) => {
       key={documentId}
     >
       <CardContent className="relative flex items-center justify-center px-6 py-2 h-[250px] w-full">
-        <img
-          src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.url}`}
-          alt="Imagen de producto destacado"
-          className="h-full w-full object-contain max-h-full max-w-full"
-        />
+        {image?.url && (
+          <img
+            src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.url}`}
+            alt={`Imagen de ${name}`}
+            className="h-full w-full object-contain max-h-full max-w-full"
+          />
+        )}
         <div className="absolute w-full px-6 transition duration-200 sm:opacity-0 sm:group-hover:opacity-100 bottom-5">
           <div className="flex justify-center gap-x-6">
             <IconButton
               onClick={() => router.push(`/products/${product.slug}`)}
               icon={<Expand size={20} />}
-              className="text-gray-600 z-99"
+              className="text-gray-600 z-10"
             />
             <IconButton
               onClick={() => addItem(product)}
               icon={<ShoppingCart size={20} />}
-              className="text-gray-600 z-99"
+              className="text-gray-600 z-10"
             />
           </div>
         </div>

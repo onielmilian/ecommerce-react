@@ -16,30 +16,35 @@ import {
 import { Input } from "../../../../components/ui/input";
 import { useRouter } from "next/navigation";
 
-const schema = z.object({
-  name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
-  lastName: z.string().min(2, "El apellido debe tener al menos 2 caracteres"),
-  email: z
-    .string()
-    .email("Correo inválido")
-    .min(1, "El correo es un campo obligatorio"),
-  password: z
-    .string()
-    .min(6, "La contraseña debe tener al menos 6 caracteres "),
-  confirmedPassword: z
-    .string()
-    .min(6, "La contraseña debe tener al menos 6 caracteres "),
-}).refine(data => data.password === data.confirmedPassword, {
-  message: "Las contraseñas no coinciden",
-  path: ['confirmedPassword']
-})
+const schema = z
+  .object({
+    name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
+    lastName: z.string().min(2, "El apellido debe tener al menos 2 caracteres"),
+    email: z
+      .string()
+      .email("Correo inválido")
+      .min(1, "El correo es un campo obligatorio"),
+    password: z
+      .string()
+      .min(6, "La contraseña debe tener al menos 6 caracteres "),
+    confirmedPassword: z
+      .string()
+      .min(6, "La contraseña debe tener al menos 6 caracteres "),
+  })
+  .refine((data) => data.password === data.confirmedPassword, {
+    message: "Las contraseñas no coinciden",
+    path: ["confirmedPassword"],
+  });
 
 export const RegisterForm = () => {
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
     defaultValues: {
+      lastName: "",
+      name: "",
       email: "",
       password: "",
+      confirmedPassword: "",
     },
   });
   const router = useRouter();
@@ -59,7 +64,7 @@ export const RegisterForm = () => {
             <FormItem>
               <FormLabel>Nombre</FormLabel>
               <FormControl>
-                <Input placeholder="Oniel" {...field} />
+                <Input placeholder="Jon" {...field} />
               </FormControl>
               <FormDescription>Ingresa tu nombre.</FormDescription>
               <FormMessage />
@@ -73,7 +78,7 @@ export const RegisterForm = () => {
             <FormItem>
               <FormLabel>Apellido</FormLabel>
               <FormControl>
-                <Input placeholder="Milian" {...field} />
+                <Input placeholder="Snow" {...field} />
               </FormControl>
               <FormDescription>Ingresa tu apellido.</FormDescription>
               <FormMessage />
@@ -87,7 +92,7 @@ export const RegisterForm = () => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="m@ejemplo.com" {...field} />
+                <Input placeholder="jonsnow@ejemplo.com" {...field} />
               </FormControl>
               <FormDescription>Ingresa tu email.</FormDescription>
               <FormMessage />

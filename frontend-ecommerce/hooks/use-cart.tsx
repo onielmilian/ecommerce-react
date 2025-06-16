@@ -4,7 +4,7 @@ import { ProductType } from "../types/product";
 import { toast } from "sonner";
 
 interface CartStore {
-  items: ProductType [];
+  items: ProductType[];
   addItem: (data: ProductType) => void;
   removeItem: (id: number) => void;
   removeAll: () => void;

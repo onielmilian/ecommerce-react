@@ -10,7 +10,7 @@ async function fetchData(url: string) {
 }
 
 export async function getProducts(queryString: string, currentPage: number) {
-  const PAGE_SIZE = 8;
+  const PAGE_SIZE = 9;
   const query = qs.stringify({
     sort: ["createdAt:desc"],
     filters: {
@@ -25,7 +25,9 @@ export async function getProducts(queryString: string, currentPage: number) {
       page: currentPage,
 
     },
+    populate: ["image"],
   });
+
   const url = new URL("/api/products", process.env.NEXT_PUBLIC_BACKEND_URL);
   url.search = query;
   return fetchData(url.href);

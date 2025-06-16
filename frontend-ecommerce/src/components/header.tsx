@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
 
 import ToggleTheme from "./toggle-theme";
@@ -16,12 +16,6 @@ const Header = () => {
           Tecno
           <span className="font-bold">Mobile</span>
         </h1>
-        <div className="items-center justify-between hidden sm:flex">
-          <p>Menu desktop</p>
-        </div>
-        <div className="flex sm:hidden">
-          <p>Menu mobile</p>
-        </div>
         <div className="flex items-center justify-between gap-2 sm:gap-7">
           <ToggleTheme />
         </div>

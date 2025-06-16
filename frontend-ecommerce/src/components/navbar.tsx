@@ -4,6 +4,7 @@ import {
   Heart,
   HeartPulse,
   ShoppingCart,
+  Smartphone,
   User,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -31,11 +32,36 @@ const Navbar = () => {
           Tecno
           <span className="font-bold">Mobile</span>
         </h1>
-        <div className="items-center justify-between hidden sm:flex">
-          <p>Menu desktop</p>
+        <div className="items-center justify-between hidden sm:flex cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-115">
+          <div
+            onClick={() => {
+              router.push("/products");
+              setSelected("products");
+            }}
+            className="flex items-center justify-center"
+          >
+            <p>Productos</p>
+            <Smartphone
+              strokeWidth={selected === "products" ? "2" : "1.5"}
+              className={`
+                ${selected === "products" ? "fill-primary" : ""}`}
+              onClick={() => {
+                router.push("/products");
+                setSelected("products");
+              }}
+            />
+          </div>
         </div>
         <div className="flex sm:hidden">
-          <p>Menu mobile</p>
+          <Smartphone
+            strokeWidth={selected === "products" ? "2" : "1.5"}
+            className={`cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-115
+              ${selected === "products" ? "fill-primary" : ""}`}
+            onClick={() => {
+              router.push("/products");
+              setSelected("products");
+            }}
+          />
         </div>
         <div className="flex items-center justify-between gap-2 sm:gap-7">
           {cart.items.length === 0 ? (
