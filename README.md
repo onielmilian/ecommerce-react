@@ -28,10 +28,24 @@ Este proyecto es una aplicación full stack construida con:
 .
 ├── backend-ecommerce/         # Proyecto Strapi (API REST)
 └── frontend-ecommerce/        # Proyecto Next.js
-    ├── app/         # Rutas y páginas
-    ├── components/  # Componentes reutilizables
-    ├── store/       # Estados globales con Zustand
-    └── ui/          # Componentes personalizados (Shadcn)
+    ├── api/         # Api endpoints
+    ├── hooks/         # Custom hooks
+    ├── src/
+        ├── app/         # Rutas y páginas
+            ├── (auth)/         # Rutas y páginas autenticacion
+                ├── login/         # Pagina de login
+                ├── register/         # Pagina de registro
+            ├── (routes)/         # Rutas y páginas
+                ├── brand/         # Página brand
+                ├── home/         # Página home
+                ├── cart/         # Página cart
+                ├── loved-products/         # Página loved-products
+                ├── products/         # Página products
+                ├── profile/         # Página profile
+        ├── components/  # Componentes reutilizables
+            └── ui/          # Componentes personalizados (Shadcn)
+        └── lib/          # Utiles
+    ├── Types/         # Tipos de datos
 ```
 
 ---
@@ -66,6 +80,32 @@ npm run dev
 
 Frontend alojado en: http://localhost:3000
 
+
+## 🔐 Variables de entorno
+
+### Backend (`backend/.env`)
+```env
+# Server
+HOST=localhost
+PORT=1337
+
+# Database (ejemplo)
+DATABASE_CLIENT=postgres
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_NAME=ecommerce-db
+DATABASE_USERNAME=postgres
+DATABASE_PASSWORD=admin
+DATABASE_SSL=false
+DATABASE_FILENAME=
+JWT_SECRET=T++2kIzT4I30Nj6OuMVaeA==
+```
+
+### Frontend (`frontend/.env.local`)
+```env
+NEXT_PUBLIC_BACKEND_URL=http://localhost:1337
+```
+
 ---
 
 ## 🧠 Estado Global (Zustand)
@@ -95,6 +135,6 @@ import { User } from "lucide-react";
 
 ## ✅ TODO
 
-- [ ] Nada
+- [ ] Nada :)
 
 ---
