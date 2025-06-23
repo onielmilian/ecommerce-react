@@ -10,8 +10,8 @@ import {
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import ToggleTheme from "./toggle-theme";
-import { useCart } from "../../hooks/use-cart";
-import { useLovedProducts } from "../../hooks/use_loved_products";
+import { useCart } from "@/src/hooks/use-cart";
+import { useLovedProducts } from "@/src/hooks/use_loved_products";
 
 const Navbar = () => {
   const router = useRouter();

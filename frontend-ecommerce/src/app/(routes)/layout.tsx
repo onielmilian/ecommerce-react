@@ -1,7 +1,7 @@
-import ThemeProvider from "../../components/theme-provider";
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
-import { Toaster } from "../../components/ui/sonner";
+import Footer from "@/src/components/footer";
+import Navbar from "@/src/components/navbar";
+import ThemeProvider from "@/src/components/theme-provider";
+import { Toaster } from "sonner";
 
 export default function Layout({
   children,

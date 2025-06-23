@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/src/components/ui/table";
-import { ProductType } from "../../../../../../types/product";
+import { ProductType } from "../../../../../types/product";
 
 interface InfoProductDetailProps {
   product: ProductType;
@@ -33,9 +33,7 @@ const InfoProductDetail = ({ product }: InfoProductDetailProps) => {
             <TableCell>{product.storage_capacity} GB</TableCell>
           </TableRow>
           <TableRow className="border-none">
-            <TableCell className="font-semibold">
-              Tamaño de pantalla
-            </TableCell>
+            <TableCell className="font-semibold">Tamaño de pantalla</TableCell>
             <TableCell>{product.screen_size} pulgadas</TableCell>
           </TableRow>
           <TableRow className="border-none">

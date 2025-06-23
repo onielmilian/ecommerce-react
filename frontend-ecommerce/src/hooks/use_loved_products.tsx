@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { ProductType } from "../types/product";
+import { ProductType } from "@/src/types/product";
 import { toast } from "sonner";
 
 interface UseLovedProductsProps {

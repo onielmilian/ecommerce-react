@@ -6,9 +6,9 @@ import {
   Pagination,
   PaginationContent,
   PaginationItem,
-} from "../components/ui/pagination";
+} from "@/src/components/ui/pagination";
 
-import { Button } from "../components/ui/button";
+import { Button } from "@/src/components/ui/button";
 
 interface PaginationProps {
   pageCount: number;

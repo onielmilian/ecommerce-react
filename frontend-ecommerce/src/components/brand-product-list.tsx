@@ -1,12 +1,6 @@
-import { Expand, ShoppingCart } from "lucide-react";
-import { useGetCurrency } from "../../hooks/useGetCurrency";
-import { ProductType } from "../../types/product";
-import IconButton from "./icon-button";
-import SkeletonSchema from "./skeleton-schema";
-import { Card, CardContent } from "./ui/card";
-import { useRouter } from "next/navigation";
-import { useCart } from "../../hooks/use-cart";
-import ProductCard from "./product-card";
+import SkeletonSchema from "@/src/components/skeleton-schema";
+import ProductCard from "@/src/components/product-card";
+import { ProductType } from "@/src/types/product";
 
 interface ProductListProps {
   productResult: any;

@@ -1,7 +1,7 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
-import { ResponseType } from "../../../../../types/response";
-import { useGetProduct } from "../../../../../api/getProduct";
+import { ResponseType } from "../../../../types/response";
+import { useGetProduct } from "../../../../api/getProduct";
 import SkeletonProduct from "@/src/components/skeleton-product";
 import ImageProduct from "./components/image-product";
 import InfoProduct from "./components/info-product";

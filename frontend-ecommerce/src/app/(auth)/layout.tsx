@@ -1,6 +1,6 @@
-import ThemeProvider from "../../components/theme-provider";
-import Footer from "../../components/footer";
-import { Toaster } from "../../components/ui/sonner";
+import ThemeProvider from "@/src/components/theme-provider";
+import Footer from "@/src/components/footer";
+import { Toaster } from "@/src/components/ui/sonner";
 import Header from "@/src/components/header";
 
 export default function Layout({

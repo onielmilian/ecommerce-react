@@ -1,9 +1,9 @@
 import { useRouter } from "next/navigation";
-import { ProductType } from "../../../../../types/product";
-import { useCart } from "../../../../../hooks/use-cart";
-import { useGetCurrency } from "../../../../../hooks/useGetCurrency";
-import { cn } from "@/src/lib/utils";
 import { X } from "lucide-react";
+import { ProductType } from "@/src/types/product";
+import { useCart } from "@/src/hooks/use-cart";
+import { useGetCurrency } from "@/src/hooks/useGetCurrency";
+import { cn } from "@/src/lib/utils";
 
 interface CartItemProps {
   product: ProductType;

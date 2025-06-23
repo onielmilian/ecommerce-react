@@ -1,8 +1,5 @@
 import Link from "next/link";
-import { BrandType } from "../../types/brand";
 import SkeletonSchema from "./skeleton-schema";
-import { useGetBrands } from "../../api/useGetBrands";
-import { ResponseType } from "../../types/response";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -13,6 +10,9 @@ import {
 } from "./ui/carousel";
 import { Card, CardContent } from "./ui/card";
 import React from "react";
+import { useGetBrands } from "@/src/api/useGetBrands";
+import { ResponseType } from "@/src/types/response";
+import { BrandType } from "@/src/types/brand";
 
 export function BrandCarousel() {
   const { result, loading, error }: ResponseType = useGetBrands();
@@ -57,7 +57,7 @@ export function BrandCarousel() {
             );
           })}
       </CarouselContent>
-      <CarouselPrevious className="text-primary hover:text-primary cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-115"/>
+      <CarouselPrevious className="text-primary hover:text-primary cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-115" />
       <CarouselNext className="text-primary hover:text-primary cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-115 hidden md:flex" />
     </Carousel>
   );

@@ -1,15 +1,14 @@
+import { checkAuth } from "@/src/lib/auth";
 import { redirect } from "next/navigation";
-import { checkAuth } from "../lib/auth";
 
-
-async function Page () {
+async function Page() {
   const isAuthenticated = await checkAuth();
   if (!isAuthenticated) {
     redirect("/login");
   } else {
     redirect("/home");
   }
-  return null
-};
+  return null;
+}
 
 export default Page;

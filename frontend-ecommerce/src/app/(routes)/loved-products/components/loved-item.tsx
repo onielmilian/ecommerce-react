@@ -1,11 +1,11 @@
 import { useRouter } from "next/navigation";
-import { useCart } from "../../../../../hooks/use-cart";
-import { useGetCurrency } from "../../../../../hooks/useGetCurrency";
-import { ProductType } from "../../../../../types/product";
-import { cn } from "@/src/lib/utils";
-import { useLovedProducts } from "../../../../../hooks/use_loved_products";
+import { ProductType } from "../../../../types/product";
 import { X } from "lucide-react";
+import { useCart } from "@/src/hooks/use-cart";
+import { useLovedProducts } from "@/src/hooks/use_loved_products";
+import { useGetCurrency } from "@/src/hooks/useGetCurrency";
 import { Button } from "@/src/components/ui/button";
+import { cn } from "@/src/lib/utils";
 
 interface LovedItemProps {
   product: ProductType;

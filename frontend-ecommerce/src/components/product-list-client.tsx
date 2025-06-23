@@ -1,7 +1,7 @@
 "use client";
 
+import { ProductType } from "@/src/types/product";
 import ProductCard from "@/src/components/product-card";
-import { ProductType } from "../../types/product";
 
 interface ProductListClientProps {
   products: ProductType[];

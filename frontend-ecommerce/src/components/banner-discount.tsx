@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
 import { Gem } from "lucide-react";
+import { buttonVariants } from "./ui/button";
 
 const BannerDiscount = () => {
   return (

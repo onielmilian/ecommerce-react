@@ -1,5 +1,5 @@
 import { Separator } from "@/src/components/ui/separator";
-import { ProductType } from "../../../../../../types/product";
+import { ProductType } from "../../../../../types/product";
 import { useGetCurrency } from "../../../../../../hooks/useGetCurrency";
 import { Button } from "@/src/components/ui/button";
 import { Heart, HeartCrack } from "lucide-react";

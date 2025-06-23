@@ -1,11 +1,11 @@
 "use client";
 import { Expand, ShoppingCart } from "lucide-react";
-import IconButton from "./icon-button";
-import { Card, CardContent } from "./ui/card";
-import { ProductType } from "../../types/product";
-import { useGetCurrency } from "../../hooks/useGetCurrency";
+import IconButton from "@/src/components/icon-button";
+import { Card, CardContent } from "@/src/components/ui/card";
 import { useRouter } from "next/navigation";
-import { useCart } from "../../hooks/use-cart";
+import { ProductType } from "@/src/types/product";
+import { useGetCurrency } from "@/src/hooks/useGetCurrency";
+import { useCart } from "@/src/hooks/use-cart";
 
 interface ProductCardProps {
   product: ProductType;

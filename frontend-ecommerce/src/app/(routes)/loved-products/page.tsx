@@ -1,5 +1,5 @@
 "use client";
-import { useLovedProducts } from "../../../../hooks/use_loved_products";
+import { useLovedProducts } from "@/src/hooks/use_loved_products";
 import LovedItem from "./components/loved-item";
 
 const Page = () => {

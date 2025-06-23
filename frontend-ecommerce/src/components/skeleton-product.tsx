@@ -1,4 +1,4 @@
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "@/src/components/ui/skeleton";
 
 const SkeletonProduct = () => {
   return (

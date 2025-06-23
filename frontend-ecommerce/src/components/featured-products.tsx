@@ -1,11 +1,7 @@
 "use client";
 
 import { Expand, ShoppingCart, Star } from "lucide-react";
-import { useGetFeaturedProducts } from "../../api/useGetFeaturedProducts";
-import { ProductType } from "../../types/product";
-import { type ResponseType } from "../../types/response";
 import SkeletonSchema from "./skeleton-schema";
-import { Card, CardContent } from "./ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -13,11 +9,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
-import { useRouter } from "next/navigation";
-import { useGetCurrency } from "../../hooks/useGetCurrency";
-import IconButton from "../components/icon-button";
-import { useCart } from "../../hooks/use-cart";
-import ProductCard from "./product-card";
+import ProductCard from "@/src/components/product-card";
+import { ResponseType } from "@/src/types/response";
+import { useGetFeaturedProducts } from "@/src/api/useGetFeaturedProducts";
+import { ProductType } from "@/src/types/product";
 
 const FeaturedProducts = () => {
   const { loading, result }: ResponseType = useGetFeaturedProducts();

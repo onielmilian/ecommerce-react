@@ -1,6 +1,6 @@
 "use client";
 import { Separator } from "@/src/components/ui/separator";
-import { useCart } from "../../../../hooks/use-cart";
+import { useCart } from "@/src/hooks/use-cart";
 import { Button } from "@/src/components/ui/button";
 import CartItem from "./components/cart-item";
 

@@ -1,4 +1,4 @@
-import { ProductType } from "../types/product";
+import { ProductType } from "@/src/types/product";
 
 enum Currency {
   USD = "$",
